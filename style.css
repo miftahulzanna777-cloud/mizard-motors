@@ -267,8 +267,8 @@ nav a:hover{
 .stats{
     display:flex;
     justify-content:center;
-    gap:50px;
-    padding:50px;
+    gap:20px;
+    padding:60px;
 }
 
 .stat{
@@ -320,8 +320,8 @@ nav a:hover{
     opacity:1;
     transition:opacity 1s ease-in-out;
 }
-@media (max-width: 768px){
 
+@media (max-width: 768px){}
 
 .slider img{
     height:300px;
@@ -344,7 +344,6 @@ nav a:hover{
 }
 
 nav a{
-    display:block;
-    margin:10px 0;
+    display:inline-block;
+    margin:10px;
 }
-
