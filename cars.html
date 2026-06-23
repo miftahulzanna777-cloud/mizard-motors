@@ -90,6 +90,33 @@ function buyMercedes(){
 
 </script>
 
+<script>
+
+let searchBox = document.getElementById("searchInput");
+
+searchBox.addEventListener("keyup", function(){
+
+    let searchText = searchBox.value.toLowerCase();
+
+    let cars = document.querySelectorAll(".car");
+
+    cars.forEach(function(car){
+
+        let carName = car.innerText.toLowerCase();
+
+        if(carName.includes(searchText)){
+            car.style.display = "block";
+        }
+        else{
+            car.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
+
 </body>
 
 </html>

@@ -14,7 +14,13 @@
     <a href="about.html">About</a>
     <a href="cars.html">Cars</a>
     <a class="contactlink" href="#contact">Contact</a>
-</nav>
+   </nav>
+
+<div class="slider">
+
+    <img id="sliderImage" src="BMW M5.jpg" width="100%">
+
+</div>
 
 <div class="hero">
 
@@ -33,6 +39,26 @@
     <button>Get Started</button>
 
 </div>
+
+<section class="featured">
+
+    <h1>⭐ Featured Car of the Week</h1>
+
+    <img src="BMW M5.jpg" width="50%">
+
+    <h2>BMW M5 Competition</h2>
+
+    <p>
+        Experience luxury and performance with the BMW M5.
+        717 HP, Twin Turbo V8 and an incredible driving experience.
+    </p>
+
+    <a href="bmwm5.html">
+            <button class="bmwm5btn">View Details</button>
+        </a>
+
+
+</section>
 
 <section class="stats">
 
@@ -199,6 +225,40 @@ let clientCounter = setInterval(function(){
     }
 
 }, 2);
+
+</script>
+
+<script>
+
+let images = [
+    "BMW M5.jpg",
+    "Ferrari F8.jpg",
+    "Mercedes amg.jpg"
+];
+
+let current = 0;
+
+setInterval(function(){
+
+    let slider = document.getElementById("sliderImage");
+
+    slider.style.opacity = 0;
+
+    setTimeout(function(){
+
+        current++;
+
+        if(current >= images.length){
+            current = 0;
+        }
+
+        slider.src = images[current];
+
+        slider.style.opacity = 1;
+
+    },1000);
+
+},3000);
 
 </script>
 
