@@ -18,7 +18,11 @@
 
 <div class="slider">
 
-    <img id="sliderImage" src="BMW M5.jpg" width="100%">
+    <button id="prevBtn">⬅</button>
+
+    <img id="sliderImage" src="BMW M5.jpg">
+
+    <button id="nextBtn">➡</button>
 
 </div>
 
@@ -238,7 +242,7 @@ let images = [
 
 let current = 0;
 
-setInterval(function(){
+document.getElementById("nextBtn").onclick = function(){
 
     let slider = document.getElementById("sliderImage");
 
@@ -256,9 +260,31 @@ setInterval(function(){
 
         slider.style.opacity = 1;
 
-    },1000);
+    },500);
 
-},3000);
+};
+
+document.getElementById("prevBtn").onclick = function(){
+
+    let slider = document.getElementById("sliderImage");
+
+    slider.style.opacity = 0;
+
+    setTimeout(function(){
+
+        current--;
+
+        if(current < 0){
+            current = images.length - 1;
+        }
+
+        slider.src = images[current];
+
+        slider.style.opacity = 1;
+
+    },500);
+
+};
 
 </script>
 
