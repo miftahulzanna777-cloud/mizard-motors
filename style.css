@@ -239,6 +239,13 @@ nav a:hover{
 
     animation: fadein 5s;
 }
+
+@media (max-width: 768px){
+    .hero{
+        padding: 100px 20px;
+    }
+}
+
 .hero h1{
     font-size:80px;
     text-shadow: 3px 3px 10px black;
@@ -300,6 +307,11 @@ nav a:hover{
     overflow:hidden;
 }
 
+@media (max-width: 768px){
+    .slider img{
+        height:300px;
+    }
+}
 .slider img{
     width:100%;
     height:900px;
@@ -308,3 +320,31 @@ nav a:hover{
     opacity:1;
     transition:opacity 1s ease-in-out;
 }
+@media (max-width: 768px){
+
+
+.slider img{
+    height:300px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:25px;
+}
+
+.car{
+    width:90%;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+nav a{
+    display:block;
+    margin:10px 0;
+}
+
