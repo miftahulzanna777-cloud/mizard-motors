@@ -207,7 +207,7 @@ input{
 }
 nav{
     background: linear-gradient(to right, blue, purple, pink);
-    padding:20px;
+    padding:4px;
 
     position:sticky;
     top:0;
@@ -303,8 +303,10 @@ nav a:hover{
     border-radius:15px;
 }
 .slider{
-    width:100%;
-    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
 }
 
 @media (max-width: 768px){
@@ -313,7 +315,7 @@ nav a:hover{
     }
 }
 .slider img{
-    width:100%;
+    width:85%;
     height:900px;
     object-fit:cover;
     object-position:center;
@@ -321,11 +323,7 @@ nav a:hover{
     transition:opacity 1s ease-in-out;
 }
 
-@media (max-width: 768px){}
 
-.slider img{
-    height:300px;
-}
 
 .hero h1{
     font-size:40px;
