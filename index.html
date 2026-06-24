@@ -18,11 +18,11 @@
 
 <div class="slider">
 
-    <button id="prevBtn">🚘</button>
+    <img id="prevBtn" src="left-arrow.jpg" alt="Previous">
 
     <img id="sliderImage" src="BMW M5.jpg" width="100%">
 
-    <button id="nextBtn">➡</button>
+    <img id="nextBtn" src="right-arrow.jpg">
 
 </div>
 
@@ -40,7 +40,7 @@
 
     <p>What you can afford is here</p>
 
-    <button>Get Started</button>
+    <button class="getstartedbtn">Get Started</button>
 
 </div>
 
@@ -63,6 +63,8 @@
 
 
 </section>
+
+<img src="rotatingwheel.gif" class="dance-cartoon">
 
 <section class="stats">
 
@@ -92,7 +94,7 @@
     
      <h2 id="about">About Me</h2>
 
-    <p id="message">I am learning Web Development.</p>
+    <p id="aboutmessage">I am learning Web Development.</p>
 
     <button class="bgbtn" onclick="changeColor()">BG colour</button>
 
@@ -105,6 +107,7 @@
 <p>
 Hello there i am the guy you need in times of your need.
 </p>
+
 <p>
     To fullfill your tech needs I am the guy you need to hire for your next project 
     
@@ -137,27 +140,19 @@ function changeColor() {
 
 <hr>
 
-<h2 id="contact">Contact Me</h2>
+<img src="telegram scanner.png" class="contact-image">
 
-<p>Email: mizardsite777@gmail.com</p>
+<h2 id="contact">Send Me a Message</h2>
 
-<p>Phone: +91 9876543210</p>
-
-<h2>Send Me a Message</h2>
-
-<input type="text" placeholder="Enter your name">
+<input type="text" id="name" placeholder="Enter your name">
 
 <br><br>
 
-<input type="email" placeholder="Enter your email">
+<textarea id="message" placeholder="Write your message"></textarea>
 
 <br><br>
 
-<textarea placeholder="Write your message"></textarea>
-
-<br><br>
-
-<button class="sendbtn">Send</button>
+<button onclick="sendWhatsApp()">Send via WhatsApp</button>
 
 <script>
 
@@ -286,6 +281,33 @@ document.getElementById("prevBtn").onclick = function(){
 };
 
 
+
+</script>
+
+<a href="https://wa.me/8822319002" class="whatsapp-btn" target="_blank">
+    💬 WhatsApp
+</a>
+
+<script>
+
+function sendWhatsApp(){
+
+    let name = document.getElementById("name").value;
+    let message = document.getElementById("message").value;
+
+    let phone = "8822319002";
+
+    let text =
+    "Hello, my name is " + name +
+    ".%0A%0A" +
+    message;
+
+    let url =
+    "https://wa.me/" + phone + "?text=" + text;
+
+    window.open(url, "_blank");
+
+}
 
 </script>
 

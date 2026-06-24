@@ -315,9 +315,9 @@ nav a:hover{
     }
 }
 .slider img{
-    width:85%;
-    height:900px;
-    object-fit:cover;
+    width: 85%;
+    height:777px;
+    object-fit:container;
     object-position:center;
     opacity:1;
     transition:opacity 1s ease-in-out;
@@ -344,4 +344,60 @@ nav a:hover{
 nav a{
     display:inline-block;
     margin:10px;
+}
+
+#prevBtn,
+#nextBtn{
+    width:50px;
+    height:50px;
+    cursor:pointer;
+}
+.getstartedbtn{
+    background-color: rgb(4, 65, 40);
+    color: rgb(254, 253, 253);
+    font-weight: 700;
+    padding: 10px 17px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 22px;
+    margin-top:30px;
+}
+
+.getstartedbtn:hover{
+    background-color: rgba(177, 9, 186, 0.381);
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    background-color:#2590d39f;
+    color:rgb(231, 201, 196);
+
+    padding:15px 20px;
+    border-radius:50px;
+
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+
+    box-shadow:0px 5px 15px gray;
+
+    z-index:1000;
+}
+
+.dance-cartoon{
+    width:150px;
+    display:block;
+    margin:20px auto;
+}
+
+.contact-image{
+    width:111px;
+    margin-left:50px;
+    margin-right:-50px;
+    margin-bottom:-100px;
 }
